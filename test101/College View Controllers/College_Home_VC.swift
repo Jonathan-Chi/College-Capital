@@ -111,6 +111,7 @@ class College_Home : UIViewController{
         bt.textColor = .white
         return bt
     }()
+    //dumb
     
     
     
