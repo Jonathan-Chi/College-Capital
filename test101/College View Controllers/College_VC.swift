@@ -2,7 +2,7 @@ import UIKit
 
 
 public var college_list = [College]()
-
+public var college_pathway = [College_Pathway]()
 
  
 class College_VC : UIViewController {
@@ -23,7 +23,7 @@ class College_VC : UIViewController {
         do {
             let jsonColleges = try decoder.decode([College].self, from: json)
             college_list = jsonColleges
-            
+            //MARK: STORES ALL OF THE COLLEGE DATA IN A LARGE ARRAY VARIABLE
         } catch DecodingError.keyNotFound(let key, let context) {
             Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
         } catch DecodingError.valueNotFound(let type, let context) {
@@ -37,7 +37,37 @@ class College_VC : UIViewController {
             NSLog("Error in read(from:ofType:) domain= \(error.domain), description= \(error.localizedDescription)")
         }
     }
+
+    func get_pathway(file_path : String){
+        
+        guard let path = Bundle.main.path(forResource : file_path, ofType: "json") else {return}
+        
+        let url = URL(fileURLWithPath: path)
+        if let data = try? Data(contentsOf: url) {
+            parse_pathway(json: data)
+        }
+    }
     
+    func parse_pathway(json: Data) {
+        let decoder = JSONDecoder()
+        do {
+            let jsonColleges = try decoder.decode([College_Pathway].self, from: json)
+            college_pathway = jsonColleges
+            //MARK: STORES ALL OF THE COLLEGE PATHWAYS IN A LARGE ARRAY VARIABLE
+        } catch DecodingError.keyNotFound(let key, let context) {
+            Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
+        } catch DecodingError.valueNotFound(let type, let context) {
+            Swift.print("could not find type \(type) in JSON: \(context.debugDescription)")
+        } catch DecodingError.typeMismatch(let type, let context) {
+            Swift.print("type mismatch for type \(type) in JSON: \(context.debugDescription)")
+            Swift.print()
+        } catch DecodingError.dataCorrupted(let context) {
+            Swift.print("data found to be corrupted in JSON: \(context.debugDescription)")
+        } catch let error as NSError {
+            NSLog("Error in read(from:ofType:) domain= \(error.domain), description= \(error.localizedDescription)")
+        }
+    }
+
     
     
     
@@ -52,9 +82,9 @@ class College_VC : UIViewController {
         }
     }
     
-    let college_search = UINavigationController(rootViewController: College_Search())
-    let top_thirty = College_Home()
-    let bookmark = UINavigationController(rootViewController: College_Bookmarked())
+    let college_search = UINavigationController(rootViewController: College_Search_VC())
+    let top_thirty = College_Home_VC()
+    let bookmark = UINavigationController(rootViewController: College_Bookmarked_VC())
     let college_map = College_Map_VC()
     let about_us = About_US_VC()
 
@@ -136,6 +166,41 @@ class College_VC : UIViewController {
     
     //MARK: SETUP TASKBAR
     
+    lazy var map : UIButton = {
+        let map = UIButton()
+        map.translatesAutoresizingMaskIntoConstraints = false
+        map.layer.cornerRadius = 10
+        return map
+    } ()
+    
+    lazy var search : UIButton = {
+        let search = UIButton()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.cornerRadius = 10
+        return search
+    } ()
+    
+    lazy var bookmark_BT : UIButton = {
+        let search = UIButton()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.cornerRadius = 10
+        return search
+    } ()
+    
+    lazy var home : UIButton = {
+        let search = UIButton()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.cornerRadius = 10
+        search.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
+        return search
+    } ()
+    
+    lazy var student : UIButton = {
+        let search = UIButton()
+        search.translatesAutoresizingMaskIntoConstraints = false
+        search.layer.cornerRadius = 10
+        return search
+    } ()
     
     
     lazy var Bottom_Taskbar_View : UIView = {
@@ -143,11 +208,8 @@ class College_VC : UIViewController {
         
         
         //MARK: handle map
-        let map = UIButton()
-        map.translatesAutoresizingMaskIntoConstraints = false
+        
         iv.addSubview(map)
-        map.layer.cornerRadius = 10
-        //map.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
         
         map.centerXAnchor.constraint(equalTo: iv.centerXAnchor, constant: 0).isActive = true
         map.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -165,9 +227,7 @@ class College_VC : UIViewController {
         map.addTarget(self, action: #selector(bring_up_map_page(sender:)), for: .touchUpInside)
         
         //MARK: handle search
-        let search = UIButton()
-        search.translatesAutoresizingMaskIntoConstraints = false
-        search.layer.cornerRadius = 10
+        
         iv.addSubview(search)
         //search.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
         search.trailingAnchor.constraint(equalTo: map.leadingAnchor, constant: -25).isActive = true
@@ -187,32 +247,28 @@ class College_VC : UIViewController {
         search.addTarget(self, action: #selector(bring_up_search_page(sender:)), for: .touchUpInside)
         
         //MARK: handle bookmark
-        let bookmark = UIButton()
-        bookmark.translatesAutoresizingMaskIntoConstraints = false
-        iv.addSubview(bookmark)
-        bookmark.layer.cornerRadius = 10
+       
+        iv.addSubview(bookmark_BT)
+        
         //bookmark.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
         
-        bookmark.leadingAnchor.constraint(equalTo: map.trailingAnchor, constant: 25).isActive = true
-        bookmark.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        bookmark.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        bookmark.centerYAnchor.constraint(equalTo: iv.centerYAnchor, constant: -10).isActive = true
+        bookmark_BT.leadingAnchor.constraint(equalTo: map.trailingAnchor, constant: 25).isActive = true
+        bookmark_BT.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        bookmark_BT.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        bookmark_BT.centerYAnchor.constraint(equalTo: iv.centerYAnchor, constant: -10).isActive = true
 
         let bookmarkimage = UIImage(named: "white_bookmark")
         let bookmarkimageView = UIImageView(image: bookmarkimage!)
         bookmarkimageView.translatesAutoresizingMaskIntoConstraints = false
-        bookmark.addSubview(bookmarkimageView)
+        bookmark_BT.addSubview(bookmarkimageView)
         bookmarkimageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
         bookmarkimageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        bookmarkimageView.centerYAnchor.constraint(equalTo: bookmark.centerYAnchor, constant: 0).isActive = true
-        bookmarkimageView.centerXAnchor.constraint(equalTo: bookmark.centerXAnchor, constant: 0).isActive = true
-        bookmark.addTarget(self, action: #selector(bring_up_bookmark_page(sender:)), for: .touchUpInside)
+        bookmarkimageView.centerYAnchor.constraint(equalTo: bookmark_BT.centerYAnchor, constant: 0).isActive = true
+        bookmarkimageView.centerXAnchor.constraint(equalTo: bookmark_BT.centerXAnchor, constant: 0).isActive = true
+        bookmark_BT.addTarget(self, action: #selector(bring_up_bookmark_page(sender:)), for: .touchUpInside)
 
         
         //MARK: handle home
-        let home = UIButton()
-        home.translatesAutoresizingMaskIntoConstraints = false
-        home.layer.cornerRadius = 10
         iv.addSubview(home)
         //home.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
         
@@ -233,13 +289,10 @@ class College_VC : UIViewController {
         
         
         //MARK: handle student
-        let student = UIButton()
-        student.translatesAutoresizingMaskIntoConstraints = false
         iv.addSubview(student)
-        student.layer.cornerRadius = 10
         //student.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
         
-        student.leadingAnchor.constraint(equalTo: bookmark.trailingAnchor, constant: 25).isActive = true
+        student.leadingAnchor.constraint(equalTo: bookmark_BT.trailingAnchor, constant: 25).isActive = true
         student.heightAnchor.constraint(equalToConstant: 50).isActive = true
         student.widthAnchor.constraint(equalToConstant: 50).isActive = true
         student.centerYAnchor.constraint(equalTo: iv.centerYAnchor, constant: -10).isActive = true
@@ -269,6 +322,11 @@ class College_VC : UIViewController {
         bookmark.view.isHidden = true
         college_map.view.isHidden = true
         about_us.view.isHidden = true
+        map.backgroundColor = .clear
+        student.backgroundColor = .clear
+        bookmark_BT.backgroundColor = .clear
+        home.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
+        search.backgroundColor = .clear
       }
 
     @objc func bring_up_search_page (sender: UIButton){
@@ -277,6 +335,11 @@ class College_VC : UIViewController {
         bookmark.view.isHidden = true
         college_map.view.isHidden = true
         about_us.view.isHidden = true
+        map.backgroundColor = .clear
+        student.backgroundColor = .clear
+        bookmark_BT.backgroundColor = .clear
+        home.backgroundColor = .clear
+        search.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
     }
 
     @objc func bring_up_bookmark_page (sender: UIButton){
@@ -285,6 +348,11 @@ class College_VC : UIViewController {
         bookmark.view.isHidden = false
         college_map.view.isHidden = true
         about_us.view.isHidden = true
+        map.backgroundColor = .clear
+        student.backgroundColor = .clear
+        bookmark_BT.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
+        home.backgroundColor = .clear
+        search.backgroundColor = .clear
     }
     
     @objc func bring_up_student_page (sender: UIButton){
@@ -293,6 +361,11 @@ class College_VC : UIViewController {
         college_search.view.isHidden = true
         bookmark.view.isHidden = true
         college_map.view.isHidden = true
+        map.backgroundColor = .clear
+        student.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
+        bookmark_BT.backgroundColor = .clear
+        home.backgroundColor = .clear
+        search.backgroundColor = .clear
     }
     
     @objc func bring_up_map_page (sender: UIButton){
@@ -301,6 +374,11 @@ class College_VC : UIViewController {
         college_search.view.isHidden = true
         bookmark.view.isHidden = true
         college_map.view.isHidden = false
+        map.backgroundColor = UIColor(red: 2/255, green: 81/255, blue: 173/255, alpha: 1.0)
+        student.backgroundColor = .clear
+        bookmark_BT.backgroundColor = .clear
+        home.backgroundColor = .clear
+        search.backgroundColor = .clear
     }
     
     
@@ -323,11 +401,12 @@ class College_VC : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         get_Data(file_path: "data")
+        get_pathway(file_path: "College Pathways")
         setup_child_vc()
         setup_Bottom_Taskbar()
         
         
-        
+        print(college_pathway)
         
     }
     

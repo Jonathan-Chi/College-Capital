@@ -14,6 +14,8 @@
 		69020E8F27B83A64002592AC /* College_Subject_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69020E8E27B83A63002592AC /* College_Subject_VC.swift */; };
 		690605B7277A5B7C00FC2304 /* College_Map_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690605B6277A5B7C00FC2304 /* College_Map_VC.swift */; };
 		690605B9277A5DCE00FC2304 /* About_US_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690605B8277A5DCE00FC2304 /* About_US_VC.swift */; };
+		6915320727EF9C8A00FBA253 /* College Pathways.json in Resources */ = {isa = PBXBuildFile; fileRef = 6915320627EF9C8A00FBA253 /* College Pathways.json */; };
+		6915320927EFB82600FBA253 /* College_Major_Pathway_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6915320827EFB82600FBA253 /* College_Major_Pathway_DB.swift */; };
 		6924873A26A91C0F006865C4 /* College_Search_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924873926A91C0F006865C4 /* College_Search_VC.swift */; };
 		6924873C26A928C4006865C4 /* College_DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924873B26A928C4006865C4 /* College_DB.swift */; };
 		695AD11F26B648780041F89F /* CollegeStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695AD11E26B648780041F89F /* CollegeStyling.swift */; };
@@ -65,6 +67,8 @@
 		69020E8E27B83A63002592AC /* College_Subject_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Subject_VC.swift; sourceTree = "<group>"; };
 		690605B6277A5B7C00FC2304 /* College_Map_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Map_VC.swift; sourceTree = "<group>"; };
 		690605B8277A5DCE00FC2304 /* About_US_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About_US_VC.swift; sourceTree = "<group>"; };
+		6915320627EF9C8A00FBA253 /* College Pathways.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "College Pathways.json"; sourceTree = "<group>"; };
+		6915320827EFB82600FBA253 /* College_Major_Pathway_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Major_Pathway_DB.swift; sourceTree = "<group>"; };
 		6924873926A91C0F006865C4 /* College_Search_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Search_VC.swift; sourceTree = "<group>"; };
 		6924873B26A928C4006865C4 /* College_DB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_DB.swift; sourceTree = "<group>"; };
 		695AD11E26B648780041F89F /* CollegeStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeStyling.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				69A3E7BD2684345A00973B52 /* AppDelegate.swift */,
 				69A3E7BF2684345A00973B52 /* SceneDelegate.swift */,
+				6915320627EF9C8A00FBA253 /* College Pathways.json */,
 				69EEACAC26ABDE24003E605B /* data.json */,
 				69A3E7C32684345A00973B52 /* Main.storyboard */,
 				69A3E7C62684345C00973B52 /* Assets.xcassets */,
@@ -173,6 +178,7 @@
 				69A3E7CB2684345C00973B52 /* Info.plist */,
 				69A3E7ED2684348700973B52 /* Home_VC.swift */,
 				6924873B26A928C4006865C4 /* College_DB.swift */,
+				6915320827EFB82600FBA253 /* College_Major_Pathway_DB.swift */,
 				695AD11E26B648780041F89F /* CollegeStyling.swift */,
 				CCDB802B26CCCB1F00F9BD22 /* Enums.swift */,
 				69D2D2B126DDE9450068AD28 /* College_Search-Bookmarked_Cell.swift */,
@@ -358,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6995CA8226ABE6BF00C48AF5 /* data.json in Resources */,
+				6915320727EF9C8A00FBA253 /* College Pathways.json in Resources */,
 				69A3E7CA2684345C00973B52 /* LaunchScreen.storyboard in Resources */,
 				69A3E7C72684345C00973B52 /* Assets.xcassets in Resources */,
 				69A3E7C52684345A00973B52 /* Main.storyboard in Resources */,
@@ -497,6 +504,7 @@
 				690605B7277A5B7C00FC2304 /* College_Map_VC.swift in Sources */,
 				6924873A26A91C0F006865C4 /* College_Search_VC.swift in Sources */,
 				69D3DE9E268836D600EED564 /* College_VC.swift in Sources */,
+				6915320927EFB82600FBA253 /* College_Major_Pathway_DB.swift in Sources */,
 				6982A91D26B7A9E1004F8FB9 /* Extension_College_Detailed_VC.swift in Sources */,
 				695AD11F26B648780041F89F /* CollegeStyling.swift in Sources */,
 				CCDB802A26CA0B4800F9BD22 /* Search_Model_TableView.swift in Sources */,
@@ -693,6 +701,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FATFTR6S8J;
 				INFOPLIST_FILE = test101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -713,6 +722,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FATFTR6S8J;
 				INFOPLIST_FILE = test101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

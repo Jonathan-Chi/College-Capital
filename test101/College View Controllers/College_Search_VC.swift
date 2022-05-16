@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class College_Search : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationControllerDelegate {
+class College_Search_VC : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationControllerDelegate {
    
     var searched_college_list = [College]()
     var in_search_mode : Bool = false

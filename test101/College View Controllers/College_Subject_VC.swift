@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class College_Subject : UIViewController {
+class College_Subject_VC : UIViewController {
     
     //    lazy var engineering_CV: UICollectionView = {
     //

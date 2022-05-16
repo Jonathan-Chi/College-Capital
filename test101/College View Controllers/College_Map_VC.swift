@@ -12,9 +12,6 @@ import UIKit
 
 class College_Map_VC : UIViewController{
     
-  
-    
-    
     
     
     var mapView : MKMapView?

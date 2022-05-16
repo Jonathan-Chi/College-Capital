@@ -10,7 +10,7 @@ let USER_DF = UserDefaults.standard
 //stores individual colleges
 
 
-class College_Bookmarked : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationControllerDelegate {
+class College_Bookmarked_VC : UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UINavigationControllerDelegate {
     var college_list = [College]()
     var searched_college_list = [College]()
     var in_search_mode : Bool = false

@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: viewScene)
         
-        window?.rootViewController = Home_VC()
+        window?.rootViewController = Home_VC()//MARK: Change what view is presented
         
         window?.makeKeyAndVisible()
     }

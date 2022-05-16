@@ -151,8 +151,7 @@ extension College_Detailed_VC : UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {//defines height for each row
-//        return popular_majors_data_array[indexPath.section].category[0].heightWithConstrainedWidth(width: popular_majors_tableview.bounds.width, font: Style.myApp.font(for: .subsubtitle))
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {//defines height for each rowr
          return 50
     }
     
@@ -189,6 +188,7 @@ extension College_Detailed_VC : UITableViewDelegate, UITableViewDataSource{
             
             
             cell.detailed_text.text = major_element
+            cell.detailed_text.font = UIFont(name: "Georgia", size: 12)
             cell.icon_image.image = UIImage(named: expansion_image_array[indexPath.row])
             cell.selectionStyle = .none
 
@@ -204,6 +204,7 @@ extension College_Detailed_VC : UITableViewDelegate, UITableViewDataSource{
 
 
             cell.detailed_text.text = major_element
+            cell.detailed_text.font = UIFont(name: "Georgia", size: 12)
             cell.icon_image.image = UIImage(named: expansion_image_array[indexPath.row])
             cell.selectionStyle = .none
 
@@ -403,7 +404,7 @@ class college_detailed_tableview_cell : UITableViewCell{
         return iv
     }()
     
-    let detailed_text : UITextView = {
+    var detailed_text : UITextView = {
        let tx = UITextView()
         tx.isUserInteractionEnabled = false
         tx.translatesAutoresizingMaskIntoConstraints = false
