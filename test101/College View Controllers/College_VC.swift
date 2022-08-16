@@ -2,7 +2,7 @@ import UIKit
 
 
 public var college_list = [College]()
-public var college_pathway = [College_Pathway]()
+public var college_resources = [College_Resource]()
 
  
 class College_VC : UIViewController {
@@ -39,20 +39,20 @@ class College_VC : UIViewController {
     }
 
     func get_pathway(file_path : String){
-        
+
         guard let path = Bundle.main.path(forResource : file_path, ofType: "json") else {return}
-        
+
         let url = URL(fileURLWithPath: path)
         if let data = try? Data(contentsOf: url) {
             parse_pathway(json: data)
         }
     }
-    
+
     func parse_pathway(json: Data) {
         let decoder = JSONDecoder()
         do {
-            let jsonColleges = try decoder.decode([College_Pathway].self, from: json)
-            college_pathway = jsonColleges
+            let jsonColleges = try decoder.decode([College_Resource].self, from: json)
+            college_resources = jsonColleges
             //MARK: STORES ALL OF THE COLLEGE PATHWAYS IN A LARGE ARRAY VARIABLE
         } catch DecodingError.keyNotFound(let key, let context) {
             Swift.print("could not find key \(key) in JSON: \(context.debugDescription)")
@@ -86,7 +86,7 @@ class College_VC : UIViewController {
     let top_thirty = College_Home_VC()
     let bookmark = UINavigationController(rootViewController: College_Bookmarked_VC())
     let college_map = College_Map_VC()
-    let about_us = About_US_VC()
+    let about_us = Resources_VC()
 
     
     func setup_child_vc() {
@@ -401,12 +401,10 @@ class College_VC : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .black
         get_Data(file_path: "data")
-        get_pathway(file_path: "College Pathways")
+        get_pathway(file_path: "College Resources")
         setup_child_vc()
         setup_Bottom_Taskbar()
-        
-        
-        print(college_pathway)
+        print(college_resources)
         
     }
     

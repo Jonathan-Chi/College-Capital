@@ -59,26 +59,26 @@ class College_Detailed_VC : UIViewController{
     
     //MARK: TOP HEADER
     lazy var dismiss_button : UIButton = {
-            let bt = UIButton()
-            let image = UIImage(named: "back")
-            bt.setImage(image, for: .normal)
-            bt.translatesAutoresizingMaskIntoConstraints = false
-            return bt
-        }()
+        let bt = UIButton()
+        let image = UIImage(named: "back")
+        bt.setImage(image, for: .normal)
+        bt.translatesAutoresizingMaskIntoConstraints = false
+        return bt
+    }()
 
-        @objc func dismiss_detailed_view (){
-            dismiss(animated: true, completion: nil)
-        }
+    @objc func dismiss_detailed_view (){
+        dismiss(animated: true, completion: nil)
+    }
 
-        lazy var college_info_title : UILabel = {
-           let label = UILabel()
-            label.translatesAutoresizingMaskIntoConstraints = false
-            label.text = return_text(en: "College Information", es: "Información de la universidad", zh: "学院信息")
+    lazy var college_info_title : UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = return_text(en: "College Information", es: "Información de la universidad", zh: "学院信息")
 
-            label.textColor = .white
-            label.font = Style.myApp.font(for: .subtitle)
-            return label
-        }()
+        label.textColor = .white
+        label.font = Style.myApp.font(for: .subtitle)
+        return label
+    }()
     
     lazy var save_button : UIButton = {
         let bt = UIButton()
@@ -97,7 +97,7 @@ class College_Detailed_VC : UIViewController{
     
     
     
-    //MARK: BASE VIEW 1 LABELS
+    //MARK: BASE VIEW 1
     lazy var Base_View_1 : UIView = {
         let iv = UIView()
         iv.backgroundColor = .white
@@ -386,7 +386,7 @@ class College_Detailed_VC : UIViewController{
         scroll_view.contentSize = contentRect.size
     }
     
-    //MARK: BASE VIEW 1
+    //MARK: SETUP BASE VIEW 1
     
     func setup_Base_View_1 (){
         
