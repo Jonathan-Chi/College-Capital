@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		116FB1392326B6C9B93980ED /* Pods_test101.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20F119D9FFDEC5BA23718544 /* Pods_test101.framework */; };
-		69020E1727B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69020E1627B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf */; };
-		69020E1827B4B943002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69020E1627B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf */; };
-		69020E1927B4B944002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69020E1627B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf */; };
 		69020E8F27B83A64002592AC /* College_Subject_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69020E8E27B83A63002592AC /* College_Subject_VC.swift */; };
 		690605B7277A5B7C00FC2304 /* College_Map_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690605B6277A5B7C00FC2304 /* College_Map_VC.swift */; };
 		690605B9277A5DCE00FC2304 /* Resources_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690605B8277A5DCE00FC2304 /* Resources_VC.swift */; };
@@ -18,6 +15,7 @@
 		6924873A26A91C0F006865C4 /* College_Search_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924873926A91C0F006865C4 /* College_Search_VC.swift */; };
 		6924873C26A928C4006865C4 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6924873B26A928C4006865C4 /* Structs.swift */; };
 		693E30B928A9EA39009620FF /* College Resources.json in Resources */ = {isa = PBXBuildFile; fileRef = 693E30B828A9EA39009620FF /* College Resources.json */; };
+		69543F0528AC7F920029C0D2 /* OpenSans-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69543F0428AC7F920029C0D2 /* OpenSans-VariableFont_wdth,wght.ttf */; };
 		695AD11F26B648780041F89F /* CollegeStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695AD11E26B648780041F89F /* CollegeStyling.swift */; };
 		696756A6269FE02A00C26401 /* College_Detailed_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696756A5269FE02A00C26401 /* College_Detailed_VC.swift */; };
 		6982A91B26B7A8C4004F8FB9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6982A91A26B7A8C4004F8FB9 /* Extension.swift */; };
@@ -63,7 +61,6 @@
 		20F119D9FFDEC5BA23718544 /* Pods_test101.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test101.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE5186D6436AF3C31798C23 /* Pods-test101Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test101Tests.debug.xcconfig"; path = "Target Support Files/Pods-test101Tests/Pods-test101Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C3EF49EF02E078024BDD654 /* Pods-test101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test101.release.xcconfig"; path = "Target Support Files/Pods-test101/Pods-test101.release.xcconfig"; sourceTree = "<group>"; };
-		69020E1627B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-VariableFont_wdth,wght.ttf"; path = "../../../Downloads/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		69020E8E27B83A63002592AC /* College_Subject_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Subject_VC.swift; sourceTree = "<group>"; };
 		690605B6277A5B7C00FC2304 /* College_Map_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Map_VC.swift; sourceTree = "<group>"; };
 		690605B8277A5DCE00FC2304 /* Resources_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources_VC.swift; sourceTree = "<group>"; };
@@ -71,6 +68,7 @@
 		6924873926A91C0F006865C4 /* College_Search_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Search_VC.swift; sourceTree = "<group>"; };
 		6924873B26A928C4006865C4 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		693E30B828A9EA39009620FF /* College Resources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "College Resources.json"; sourceTree = "<group>"; };
+		69543F0428AC7F920029C0D2 /* OpenSans-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		695AD11E26B648780041F89F /* CollegeStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollegeStyling.swift; sourceTree = "<group>"; };
 		696756A5269FE02A00C26401 /* College_Detailed_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_Detailed_VC.swift; sourceTree = "<group>"; };
 		6982A91A26B7A8C4004F8FB9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -178,11 +176,11 @@
 				69A3E7C82684345C00973B52 /* LaunchScreen.storyboard */,
 				69A3E7CB2684345C00973B52 /* Info.plist */,
 				69A3E7ED2684348700973B52 /* Home_VC.swift */,
+				69543F0428AC7F920029C0D2 /* OpenSans-VariableFont_wdth,wght.ttf */,
 				6924873B26A928C4006865C4 /* Structs.swift */,
 				695AD11E26B648780041F89F /* CollegeStyling.swift */,
 				CCDB802B26CCCB1F00F9BD22 /* Enums.swift */,
 				69D2D2B126DDE9450068AD28 /* College_Search-Bookmarked_Cell.swift */,
-				69020E1627B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf */,
 				CCDB802826CA0B2A00F9BD22 /* SearchEngineModel */,
 				6982A91926B7A8A6004F8FB9 /* Extension */,
 				69E3F51F26ABF5C600D31392 /* College View Controllers */,
@@ -366,10 +364,10 @@
 				6995CA8226ABE6BF00C48AF5 /* data.json in Resources */,
 				6915320727EF9C8A00FBA253 /* College Pathways.json in Resources */,
 				69A3E7CA2684345C00973B52 /* LaunchScreen.storyboard in Resources */,
+				69543F0528AC7F920029C0D2 /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
 				69A3E7C72684345C00973B52 /* Assets.xcassets in Resources */,
 				693E30B928A9EA39009620FF /* College Resources.json in Resources */,
 				69A3E7C52684345A00973B52 /* Main.storyboard in Resources */,
-				69020E1727B4B86E002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,7 +375,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69020E1827B4B943002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +382,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69020E1927B4B944002592AC /* OpenSans-VariableFont_wdth,wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
