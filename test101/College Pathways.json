@@ -1,0 +1,58 @@
+[
+    {
+            "major": "Business",
+            "brief_description": "Students in a business major learn fundamental business knowledge in accounting, international business, finance, marketing, project management, economics and more. Students can tailor their coursework to specific types of business courses or generalize. People who study business can land in many fields of work even if business is not the end goal.",
+            "total_degrees": "390600",
+            "percent_degrees": "19",
+            "high_school_courses": ["Statistics", "Macroeconomics", "Microeconomics", "Business Math", "Marketing", "English", "Accounting", "Journalism"],
+            "jobs": ["Marketing manager", "Sales manager", "Personal financial advisor", "Accountant", "Auditor", "Management analyst", "Financial analyst", "Stockbroker", "Financial Manager"]
+        },
+        {
+            "major": "Biology",
+            "brief_description": "A biology major studies the science behind living organisms. This includes the origin and history of animal and plant life, and their characteristics, function, processes and habits. Biology majors develop the fundamentals needed to pursue a career or graduate-level work in the life sciences and medicine, dentistry and other allied health careers.",
+            "total_degrees": "121200",
+            "percent_degrees": "6",
+            "high_school_courses": ["Biology", "Research", "Chemistry", "Statistics", "Anatomy", "Environmental Science"],
+            "jobs": ["Epidemiologist", "Pharmacist", "Medical scientist", "Veterinarian", "Medical researcher", "Dentist", "Doctor", "Biotechnologist", "Nutritionist", "Physcial Therapist"]
+        },
+        {
+            "major": "Political Science",
+            "brief_description": "A political science major will examine the nature of power and governments while building skills in analysis, research and more. Students who keep up with current events and have a penchant for debate might be interested in the major. With a degree in political science, you’ll be well-equipped to understand the forces that guide political processes.",
+            "total_degrees": "160600",
+            "percent_degrees": "8",
+            "high_school_courses": ["Government", "Civics", "Human Geography", "World History", "US History", "English", "Model United Nations", "Journalism", "Seminar", "Foreign Language"],
+            "jobs": ["Attorney", "Political data archivist", "City planner", "Policy analyst", "Journalist", "Politician", "Diplomat", "Foreign service officer", "Federal Agent", "Corporate public affairs advisor"]
+        },
+        {
+            "major": "Engineering",
+            "brief_description": "An engineering major is an interdisciplinary study of math, science and some business principles. General engineering courses teach students how to design and conduct experiments, to identify and solve problems, to understand professional and ethical responsibility, and to communicate effectively. Students will learn that engineering requires a career-long commitment to education in the field, as staying up on new products and problem-solving methods is beneficial to job advancement.",
+            "total_degrees": "126700",
+            "percent_degrees": "6",
+            "high_school_courses": ["Calculus BC", "Physics", "Engineering and Design", "Computer Science", "Architecture", "Trigonometry"],
+            "jobs": ["Nuclear engineer", "Aeronautical engineer", "Chemical engineer", "Civil engineer", "Physicist", "Environmental engineer", "Decontamination engineer", "Mechanical engineer", "Electrical engineer", "Software Developler"]
+        },
+        {
+            "major": "Psychology",
+            "brief_description": "A psychology major examines the science of human behavior and mental processes. This includes the study of the mind, the brain, and human and animal social interactions. The major touches on many different areas of psychology like social, cognitive, abnormal, personality and developmental.",
+            "total_degrees": "116500",
+            "percent_degrees": "6",
+            "high_school_courses": ["Psychology", "Anatomy", "Statistics", "Research", "Seminar", "Physiology"],
+            "jobs": ["Academic counselor", "Criminal investigator", "Child development specialist", "Neuroscientific researcher", "Therapist", "Forensic psychologist", "Caseworker", "Employment interviewer", "Clinical Psychologist", "Psychiatrist"]
+        },
+        {
+            "major": "Computer Science",
+            "brief_description": "Students in a computer science major enter the dynamic world of technology, studying topics like artificial intelligence, software design and computer graphics. By the time majors complete their degrees, they will have the skills to examine complex problems with computer tools.",
+            "total_degrees": "88600",
+            "percent_degrees": "4",
+            "high_school_courses": ["Computer Science", "Calculus BC", "Graphic Design", "Web Design"],
+            "jobs": ["Software programmer", "Website designer", "App developer", "Hardware programmer", "Robotics Engineer", "Data scientist", "Systems analyst", "Information security analyst", "Programmer, Computer technician"]
+        },
+        {
+            "major": "Nursing",
+            "brief_description": "A nursing major prepares students for a career path in nursing administration, nursing research and clinical nursing. Nursing students are equipped with the skills needed to assess clinical scenarios, navigate patient interactions and work successfully in a variety of health care settings. Graduates with a nursing degree will be ready to become a registered nurse, provide comprehensive service in a health care or research setting, and make a lasting impact on patients and their families, physicians and other health professionals they interact with.",
+            "total_degrees": "251400",
+            "percent_degrees": "12",
+            "high_school_courses": ["Anatomy", "Biology", "Psychology", "Physiology", "Research"],
+            "jobs": ["Medical assistant", "Licensed practical nurse", "Burn unit nurse", "Critical care nurse", "Emergency room nurse", "Epidemics research nurse", "Health administration nurse", "Nurse anesthetist", "Paramedic", "Field medic"]
+        }
+]
